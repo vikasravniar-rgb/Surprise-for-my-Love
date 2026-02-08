@@ -1,6 +1,6 @@
 body{
   background-color: #FFC0CB;
-  color: whitesmoke;
+  color: red;
   font-family: 'Times New Roman', Times, serif;
   font-size: 18px;
   text-align: center;
@@ -150,3 +150,4 @@ body{
   pointer-events: none;
   z-index: 9999;
 }
+
