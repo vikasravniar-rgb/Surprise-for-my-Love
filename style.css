@@ -1,0 +1,152 @@
+body{
+  background-color: #FFC0CB;
+  color: whitesmoke;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Containers */
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Boxes */
+.box-1 {
+  width: 300px;
+  height: 300px;
+  background-image: url("V.gif");
+  background-size: cover;
+  border: 2px red solid;
+}
+
+.box-2{
+  width: 300px;
+  height: 200px;
+  background-image: url("V1.gif");
+  background-size: cover;
+  border: 2px red solid;
+  display: grid;
+  place-items: center;
+}
+
+/* Main button */
+.main-btn {
+  padding: 12px 28px;
+  font-size: 18px;
+  background: crimson;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Popup */
+.letter-window {
+  background: #FFC0CB;
+  padding: 60px 100px;
+  border-radius: 10px;
+  transform: scale(0.7);
+  transition: 0.3s;
+}
+
+.overlay.open .letter-window {
+  transform: scale(1);
+}
+
+/* Buttons */
+.popup-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.popup-buttons button {
+  padding: 10px 25px;
+  font-size: 18px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* YES */
+#YesBtn {
+  background: green;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+/* NO */
+#NoBtn {
+  background: #ff4d6d;
+  color: white;
+  position: relative;
+}
+
+/* Love letter */
+#loveLetter {
+  display: none;
+}
+
+#typedText {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* 🎉 Celebration GIF */
+#celebrateGif {
+  width: 280px;
+  margin-top: 20px;
+  display: none; /* shown after typing */
+}
+
+/* Hearts */
+.hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hearts::before {
+  content: "💖 💕 💗 💓 💘 💝";
+  position: absolute;
+  width: 100%;
+  top: -10%;
+  font-size: 30px;
+  animation: hearts 6s linear infinite;
+}
+
+@keyframes hearts {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(120vh); opacity: 0; }
+}
+
+/* Confetti */
+#confettiCanvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+}

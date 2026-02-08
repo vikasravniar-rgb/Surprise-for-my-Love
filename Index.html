@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Popup Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating hearts -->
+  <div class="hearts"></div>
+
+  <div class="container">
+    <div class="box-1"></div>
+  </div>
+
+  <div class="container">
+    <div class="box-2">
+      <p>I have something for you</p>
+      <button id="openBtn" class="main-btn">Click here</button>
+    </div>
+  </div>
+
+  <!-- Popup -->
+  <div class="overlay">
+    <div class="letter-window">
+
+      <div id="questionBox">
+        <h1>Hello Darling 💖</h1>
+        <p>Could you please be my Valentine 💕</p>
+
+        <div class="popup-buttons">
+          <button id="NoBtn">No</button>
+          <button id="YesBtn">Yes</button>
+        </div>
+      </div>
+
+      <!-- FINAL POPUP -->
+      <div id="loveLetter">
+        <h1>My Love 💕</h1>
+
+        <p id="typedText">
+          From the moment you came into my life,
+          everything felt warmer and brighter.
+          Thank you for being my Valentine 💖
+          😌❤️
+          Forever yours ❤️
+        </p>
+
+        <!-- 🎉 Celebration GIF (CHANGE FILE NAME HERE) -->
+        <img src="celebration.gif" id="celebrateGif" alt="Celebration">
+      </div>
+
+    </div>
+  </div>
+
+  <canvas id="confettiCanvas"></canvas>
+  <audio id="loveMusic" src="love.mp3"></audio>
+
+  <script src="main.js"></script>
+</body>
+</html>
